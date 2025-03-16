@@ -46,6 +46,11 @@ main {
 }
 
 .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
     padding: 10px;
     border: 1px #000000 solid;
     background-color: var(--secondary-color);
@@ -81,7 +86,23 @@ form > div {
 }
 
 footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     height: 50px;
     background-color: var(--primary-color);
 
+}
+
+footer > a {
+    text-decoration: none;
+    color: var(--primary-text);
+}
+
+
+button {
+
+    width: 50%;
+    background-color: transparent;
 }
