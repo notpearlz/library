@@ -24,7 +24,7 @@ header {
     justify-content: space-around;
     align-items: center;
 
-    height: 200px;
+    height: 100px;
     background-color: var(--primary-color);
 
 }
@@ -37,11 +37,11 @@ header {
 
 main {
     display: grid;
-    grid-template-columns: repeat(5, minmax(200px, 1fr));
-    grid-template-rows: 200px auto;
+    grid-template-columns: repeat(auto-fit, 250px);
+    grid-auto-rows: 250px;
     gap: 20px;
     padding: 40px;
-    height: 100%;
+    min-height: 80%;
 
 }
 
@@ -55,20 +55,33 @@ main {
 
 dialog{
     display: none;
-    justify-content: center;
-    align-items: center;
-    left: calc(50% - 500px/2);
-    height: 500px;
-    width: 500px;
+    left: calc(50% - 300px/2);
+
+    height: auto;
+    width: 300px;
     background-color: var(--primary-color);
     position: absolute;
 }
 .active {
+    display: block;
+}
+
+form {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 10px;
+    padding: 20px;
+}
+form > div {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
 }
 
 footer {
-    height: 100px;
+    height: 50px;
     background-color: var(--primary-color);
 
 }
